@@ -39,9 +39,9 @@ def scaled_df(train, validate, test):
         y_test (pandas Series): The target variable for the test data.
     """
 
-    X_train = train[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']]
-    X_validate = validate[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']]
-    X_test = test[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']]
+    X_train = train[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide', 'White']]
+    X_validate = validate[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide', 'White']]
+    X_test = test[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide', 'White']]
 
     y_train = train.quality
     y_validate = validate.quality
