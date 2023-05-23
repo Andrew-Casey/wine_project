@@ -39,13 +39,13 @@ def scaled_df(train, validate, test):
         y_test (pandas Series): The target variable for the test data.
     """
 
-    X_train = train[['Sqft','Bedrooms','Bathrooms','LA','Orange','Ventura']]
-    X_validate = validate[['Sqft','Bedrooms','Bathrooms','LA','Orange','Ventura']]
-    X_test = test[['Sqft','Bedrooms','Bathrooms','LA','Orange','Ventura']]
+    X_train = train[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']]
+    X_validate = validate[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']]
+    X_test = test[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']]
 
-    y_train = train.Tax_Value
-    y_validate = validate.Tax_Value
-    y_test = test.Tax_Value
+    y_train = train.quality
+    y_validate = validate.quality
+    y_test = test.quality
 
     #making our scaler
     scaler = MinMaxScaler()
@@ -208,15 +208,15 @@ def scale_my_data2(train, validate, test):
     scale my data using minmaxscaler and add it back to my input datasets
     '''
     scaler = MinMaxScaler()
-    scaler.fit(train[['age', 'annual_income', 'spending_score']])
+    scaler.fit(train[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']])
     
-    X_train_scaled = scaler.transform(train[['age', 'annual_income','spending_score']])
-    X_validate_scaled = scaler.transform(validate[['age', 'annual_income','spending_score']])
-    X_test_scaled = scaler.transform(test[['age', 'annual_income','spending_score']])
+    X_train_scaled = scaler.transform(train[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']])
+    X_validate_scaled = scaler.transform(validate[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']])
+    X_test_scaled = scaler.transform(test[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']])
 
-    train[['age_scaled', 'annual_income_scaled','spending_score_scaled']] = X_train_scaled
-    validate[['age_scaled', 'annual_income_scaled','spending_score_scaled']] = X_validate_scaled
-    test[['age_scaled', 'annual_income_scaled','spending_score_scaled']] = X_test_scaled
+    train[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']] = X_train_scaled
+    validate[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']] = X_validate_scaled
+    test[['fixed_acidity','volatile_acidity','citric_acid','residual_sugar','chlorides','free_sulfur_dioxide','total_sulfur_dioxide', 'density','ph','sulphates','alcohol','bound_sulfur_dioxide']] = X_test_scaled
     return train, validate, test
 
 def nulls_by_col(df):
