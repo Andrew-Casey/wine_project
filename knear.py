@@ -37,7 +37,7 @@ def k_nearest2(X_train_scaled, y_train, X_validate_scaled, y_validate):
         diff_score = train_score[-1] - validate_score[-1]
         metrics.append({'k': k, 'train_score': train_score[-1], 'validate_score': validate_score[-1], 'diff_score': diff_score})
 
-    baseline_accuracy = (y_train == 0).mean()
+    baseline_accuracy = (y_train == 6).mean()
 
     results = pd.DataFrame.from_records(metrics)
 

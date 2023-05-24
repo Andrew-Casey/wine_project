@@ -10,6 +10,18 @@ import os
 import wrangle as w
 
 def remove_outliers(df, exclude_columns=None):
+    """
+    Remove outliers from a DataFrame.
+
+    Args:
+        df (pandas.DataFrame): The input DataFrame.
+        exclude_columns (list): Columns to exclude from outlier detection and removal. Default is None.
+
+    Returns:
+        df_clean (pandas.DataFrame): The cleaned DataFrame with outliers removed.
+        summary (pandas.DataFrame): Summary of removed outliers for each column.
+
+    """
     # Copy the input dataframe to preserve the original data
     df_clean = df.copy()
 

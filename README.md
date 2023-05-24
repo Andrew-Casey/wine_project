@@ -4,7 +4,7 @@
 - Predict the quality of wine while incorporating unsupervised learning techniques.
 
 # Description:
-- Using unsupervised/supervised machine learning we want to try to predict the quality of wine. We will be using features from the wine dataset, and clustering models to try to build clusters within our notebook. Using stats tests and visualizations including clustering we will attempt to single out the drivers of quality. Then we will attempt to create a MLM that predicts the quality of wine.
+- Using unsupervised (exploration with clustering) / supervised machine learning (classification modeling) we want to try predicting the quality of wine. We will be using features from the wine dataset, and clustering models to build clusters within our notebook. Using stats tests and visualizations, including clustering we will attempt to single out the drivers of quality. We will then attempt to create a MLM that predicts the quality of wine.
 Finally, we will present the findings to our peers in a storytelling format using a live presentation.
 
 
@@ -12,23 +12,21 @@ Finally, we will present the findings to our peers in a storytelling format usin
 
 | Feature                | Data Type | Description                                       |
 |------------------------|-----------|---------------------------------------------------|
-| fixed_acidity          | float     | Fixed acidity level of the wine (g/dm^3)          |
-| volatile_acidity       | float     | Volatile acidity level of the wine (g/dm^3)       |
-| citric_acid            | float     | Citric acid content of the wine (g/dm^3)          |
-| residual_sugar         | float     | Residual sugar content of the wine (g/dm^3)       |
-| chlorides              | float     | Chloride content of the wine (g/dm^3)             |
-| free_sulfur_dioxide    | float     | Free sulfur dioxide content of the wine (mg/L)    |
-| total_sulfur_dioxide   | float     | Total sulfur dioxide content of the wine (mg/L)   |
-| density                | float     | Density of the wine (g/cm^3)                      |
+| fixed_acidity          | float     | Fixed acidity level of the wine $(g/dm^3)$        |
+| volatile_acidity       | float     | Volatile acidity level of the wine $(g/dm^3)$     |
+| citric_acid            | float     | Citric acid content of the wine $(g/dm^3)$        |
+| residual_sugar         | float     | Residual sugar content of the wine $(g/dm^3)$     |
+| chlorides              | float     | Chloride content of the wine $(g/dm^3)$           |
+| free_sulfur_dioxide    | float     | Free sulfur dioxide content of the wine $(mg/L)$  |
+| total_sulfur_dioxide   | float     | Total sulfur dioxide content of the wine $(mg/L)$ |
+| density                | float     | Density of the wine $(g/cm^3)$                    |
 | pH                     | float     | pH value of the wine                              |
-| sulphates              | float     | Sulphate content of the wine (g/dm^3)             |
+| sulphates              | float     | Sulphate content of the wine $(g/dm^3)$           |
 | alcohol                | float     | Alcohol content of the wine (% vol)               |
-| bound_sulfur_dioxide   | float     | Bound sulfur dioxide content of the wine (mg/L)   |
+| bound_sulfur_dioxide   | float     | Bound sulfur dioxide content of the wine $(mg/L)$ |
 | White                  | int       | Wine type: 1 for white wine, 0 for red wine       |
-| cluster                | int       | Cluster label from clustering algorithm 1         |
-| cluster2               | int       | Cluster label from clustering algorithm 2         |
-| cluster3               | int       | Cluster label from clustering algorithm 3         |
-| quality                | int       | subjective human taste test rating                |
+| alcohol_sugar_density  | int       | Cluster of alcohol_sugar_density                  |
+| quality                | int       | Subjective human taste test rating                |
 
 
 # Project Planning:
@@ -41,7 +39,7 @@ Finally, we will present the findings to our peers in a storytelling format usin
 - Create a live presentation in a storytelling format, so that we can deliver to our peers.
 
 
-# Initial Questions
+# Initial Questions:
 - Is there a relationship between Quality (Categorical) vs. Residual sugar (Continuous)?
 - Is there a relationship between Quality (Categorical) vs. Free Sulfur Dioxide (Continuous)?
 - Is there a relationship between Quality (Categorical) vs. Total Sulfur Dioxide (Continuous)?
@@ -49,7 +47,7 @@ Finally, we will present the findings to our peers in a storytelling format usin
 - Is there a relationship between Quality (Categorical) vs. Density (Continuous)?
 
 
-# Steps to reproduce
+# Steps to reproduce:
 - Download the red and white wine datasets from Data.World Wine Quality Dataset (https://data.world/food/wine-quality) turn into a local .csv file where the white and red wine sets have been combined into one dataset.
 - Prep the data 
 - There are no nulls
@@ -82,3 +80,7 @@ Finally, we will present the findings to our peers in a storytelling format usin
 
 
 
+
+```python
+
+```

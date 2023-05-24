@@ -71,3 +71,23 @@ def get_wine_data():
         print(f"Combined wine data CSV file created at {combined_csv_path}.")
 
     return df
+
+def get_wine():
+    """
+    Opens csv from file.
+
+    Parameters:
+    -----------
+    file_path : file should be in same folder as your current working directory
+
+    Returns:
+    --------
+    combined data frame of red and white wine
+    """
+    df = pd.read_csv('combined_wine_data.csv')
+
+    df['bound_sulfur_dioxide'] = (df.total_sulfur_dioxide - df.free_sulfur_dioxide)
+    
+    return df
+
+    
