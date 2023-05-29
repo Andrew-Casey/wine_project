@@ -1,7 +1,7 @@
 # wine_project
 
 # Goal:
-- Predict the quality of wine while incorporating unsupervised learning techniques.
+- Predict the quality of wine while incorporating unsupervised/supervised learning techniques.
 
 # Description:
 - Using unsupervised (exploration with clustering) / supervised machine learning (classification modeling) we want to try predicting the quality of wine. We will be using features from the wine dataset, and clustering models to build clusters within our notebook. Using stats tests and visualizations, including clustering we will attempt to single out the drivers of quality. We will then attempt to create a MLM that predicts the quality of wine.
@@ -31,12 +31,12 @@ Finally, we will present the findings to our peers in a storytelling format usin
 
 # Project Planning:
 
-- Aquire data from (https://data.world/food/wine-quality) and make it a local .csv file so we and both collectivly work from the same data
-- Prep the data for exploration splitting and testing/modeling
+- Aquire data from (https://data.world/food/wine-quality) and make it a local .csv file so we can both collectivly work from the same data
+- Prep the data for exploration: splitting/testing/modeling
 - Explore the data for significant features and answer questions we have about the data set
-- Clustering for further exploration of features and feature engineering
-- Modeling on train validate and test datasets to see how our features can help predict the quality of wine
-- Create a live presentation in a storytelling format, so that we can deliver to our peers.
+- Perform clustering techniques for further exploration of features/feature engineering
+- Model on train,validate data sets; Test datasets to see how our features can help predict the quality of wine
+- Create a presentation
 
 
 # Initial Questions:
@@ -48,16 +48,20 @@ Finally, we will present the findings to our peers in a storytelling format usin
 
 
 # Steps to reproduce:
-- Download the red and white wine datasets from Data.World Wine Quality Dataset (https://data.world/food/wine-quality) turn into a local .csv file where the white and red wine sets have been combined into one dataset.
+- Download data from: https://data.world/food/wine-quality
+- Use function in acquire.py: 'get_wine_data()'
+    - ***Change*** the following two lines of code to indicate where your files are located. 
+    - white_file_path = '/Users/***director where files are located***/codeup-data-science/wine_project/winequality_white.csv'
+    - red_file_path = '/Users/***director where files are located***/codeup-data-science/wine_project/winequality_red.csv'
 - Prep the data 
-- There are no nulls
-- Split data into train validate and test datasets using the 60,20,20 method.
+    - Use function in wrangle.py to remove outliers
+- Use functions in prepare.py to:
+    - Split data into train validate and test datasets using the 60,20,20 method.
 - Explore the data using visualizations and stats tests.
 - Continue exploring the data further using the k means clustering method.
 - Using the best features run classification models on the train and validate to find the best model.
 - We used KNN on our test dataset.
 - Read over the outputs and form a conclusion and summary with recommendations.
-- Create a live presentation for your peers using a storytelling format with information from the wine data.
 
 # Summary/Conclusion:
 - The following data analysis pipeline categories were accomplished (Acquire, Prepare, Explore(with clustering), Model) we found that alcohol, sugar, and density were high drivers of predicting quality.
